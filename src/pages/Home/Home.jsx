@@ -10,7 +10,7 @@ const Home = () => {
       try {
         const response = await fetch(`${BASE_URL}/trending/get-trending?api_key=${API_KEY}`);
         const data = await response.json();
-        setTrendingMovies(data.results);
+        console.log(data);
       } catch (error) {
         console.error("Error fetching trending movies:", error);
       }

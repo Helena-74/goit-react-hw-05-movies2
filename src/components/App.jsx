@@ -10,7 +10,7 @@ const Reviews = lazy(() => import('./Reviews/Reviews'));
 
 export const App = () => {
   return (
-    <div>
+   
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element={<Home />} />
@@ -22,9 +22,11 @@ export const App = () => {
         </Route>
         <Route path="*" element={<Home />} />
       </Routes>
-    </div>
+    
   );
 };
+
+export default App;
 
 // export const App = () => {
 //   return (

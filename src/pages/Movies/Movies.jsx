@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SearchForm from 'components/SearchForm/SearchForm';
+import MoviesList from 'components/MoviesList/MoviesList';
 
 const Movies = () => {
   const [searchTerm, setSearchTerm] = useState('');

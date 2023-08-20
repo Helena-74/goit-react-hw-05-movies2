@@ -9,7 +9,7 @@ const MovieDetails = () => {
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/movies/get-movie-details/${movieId}?api_key=${API_KEY}`);
+        const response = await fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`);
         const data = await response.json();
         setMovieDetails(data);
       } catch (error) {

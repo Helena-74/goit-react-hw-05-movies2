@@ -6,7 +6,6 @@ const Movies = () => {
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    // Перенаправлення на сторінку з результатами пошуку
     navigate(`/movies?search=${searchTerm}`);
   };
 

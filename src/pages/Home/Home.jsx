@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import { API_KEY, BASE_URL } from 'components/api';
 import MoviesList from 'components/MoviesList/MoviesList';
+import { Container, StyledHeader, StyledUl } from 'components/App.styled';
 
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -22,18 +23,18 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Trending Movies</h2>
-      <ul>
+    <Container>
+      <StyledHeader>Trending Movies</StyledHeader>
+      <StyledUl>
         <MoviesList movies={trendingMovies} />
         {/* {trendingMovies.map(movie => (
           <li key={movie.id}>
             <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
           </li>
         ))} */}
-      </ul>
+      </StyledUl>
       
-    </div>
+    </Container>
   );
 };
 

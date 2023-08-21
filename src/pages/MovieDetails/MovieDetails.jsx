@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_KEY, BASE_URL } from 'components/api';
+import { Container, StyledHeader } from 'components/App.styled';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -21,10 +22,10 @@ const MovieDetails = () => {
   }, [movieId]);
 
   return (
-    <div>
-      <h2>{movieDetails.title}</h2>
+    <Container>
+      <StyledHeader>{movieDetails.title}</StyledHeader>
       <p>{movieDetails.overview}</p>
-    </div>
+    </Container>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_KEY, BASE_URL } from 'components/api';
+import { Container, StyledHeader, StyledLi, StyledUl } from 'components/App.styled';
 
 const Reviews = () => {
   const { movieId } = useParams();
@@ -21,17 +22,17 @@ const Reviews = () => {
   }, [movieId]);
 
   return (
-    <div>
-      <h2>Reviews</h2>
-      <ul>
+    <Container>
+      <StyledHeader>Reviews</StyledHeader>
+      <StyledUl>
         {reviews.map(review => (
-          <li key={review.id}>
+          <StyledLi key={review.id}>
             <p>{review.author}</p>
             <p>{review.content}</p>
-          </li>
+          </StyledLi>
         ))}
-      </ul>
-    </div>
+      </StyledUl>
+    </Container>
   );
 };
 

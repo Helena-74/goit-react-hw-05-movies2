@@ -12,15 +12,15 @@ export const App = () => {
   return (
   
       <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/movies/:movieId" element={<MovieDetails />}>
-            <Route path="reviews" element={<Reviews />} />
-            <Route path="cast" element={<Cast />} />
+          <Route path="/" element={<Layout/>}>
+            <Route index element={<Home />} />
+            <Route path="/movies" element={<Movies />} />
+            <Route path="/movies/:movieId" element={<MovieDetails />}>
+              <Route path="reviews" element={<Reviews />} />
+              <Route path="cast" element={<Cast />} />
+            </Route>
           </Route>
-        </Route>
-        <Route path="*" element={<Home />} />
+          <Route path="*" element={<Home />} />
       </Routes>
     
   );
@@ -29,19 +29,3 @@ export const App = () => {
 export default App;
 
 
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template
-//     </div>
-//   );
-// };

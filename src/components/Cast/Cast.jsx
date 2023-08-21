@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_KEY, BASE_URL } from 'components/api';
+import { Container, StyledHeader, StyledLi, StyledUl } from 'components/App.styled';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -21,14 +22,14 @@ const Cast = () => {
   }, [movieId]);
 
   return (
-    <div>
-      <h2>Cast</h2>
-      <ul>
+    <Container>
+      <StyledHeader>Cast</StyledHeader>
+      <StyledUl>
         {cast.map(actor => (
-          <li key={actor.id}>{actor.name}</li>
+          <StyledLi key={actor.id}>{actor.name}</StyledLi>
         ))}
-      </ul>
-    </div>
+      </StyledUl>
+    </Container>
   );
 };
 

@@ -1,3 +1,4 @@
+import { Button, Container, Input, StyledHeader } from 'components/App.styled';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,15 +11,15 @@ const SearchForm = () => {
   };
 
   return (
-    <div>
-      <h2>Search Movies</h2>
-      <input
+    <Container>
+      <StyledHeader>Search Movies</StyledHeader>
+      <Input
         type="text"
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
-    </div>
+      <Button onClick={handleSearch}>Search</Button>
+    </Container>
   );
 };
 

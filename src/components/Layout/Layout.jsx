@@ -1,15 +1,16 @@
+import { StyledNavLink } from 'components/App.styled';
 import { Suspense } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 export function Layout() {
   return (
 <>
     <header>
       <nav>
-        <Link to="/" end>
+        <StyledNavLink to="/" end>
           Home
-        </Link>
-        <Link to="movies">Movies</Link>
+        </StyledNavLink>
+        <StyledNavLink to="movies">Movies</StyledNavLink>
       </nav>
     </header>
     <Suspense fallback={<div>Loading...</div>}>

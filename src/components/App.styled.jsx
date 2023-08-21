@@ -1,38 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-
-// export const GlobalStyle = createGlobalStyle`
-//   body {
-//     font-family: Arial, sans-serif;
-//     margin: 0;
-//     padding: 0;
-//     background-color: #f0f0f0;
-//   }
-// `;
-
-// export const AppContainer = styled.div`
-//   max-width: 1200px;
-//   margin: 0 auto;
-//   padding: 20px;
-// `;
-
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template
-//     </div>
-//   );
-// };
-
 
 export const StyledHeader = styled.h2`
   font-size: 24px;
@@ -45,10 +12,31 @@ export const StyledHead = styled.h3`
 `;
 
 export const StyledLink = styled(Link)`
-  color: #007bff;
+  padding: 5px 10px;
+  color: black;
+  display: inline-block;
+  font-size: 20px;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
+    color: #f50909;
+  }
+`;
+
+export const StyledNavLink = styled(NavLink)`
+  padding: 10px 20px;
+  margin-right: 20px;
+  color: black;
+  display: inline-block;
+  font-size: 20px;
+  border: 1px solid blue;
+  border-radius: 6px;
+  
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    background-color: #0a0acc ;
   }
 `;
 
@@ -93,3 +81,22 @@ export const Button = styled.button`
 // export const Paragraf = styled.p`
   
 // `
+
+
+// export const App = () => {
+//   return (
+//     <div
+//       style={{
+//         height: '100vh',
+//         display: 'flex',
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         fontSize: 40,
+//         color: '#010101'
+//       }}
+//     >
+//       React homework template
+//     </div>
+//   );
+// };
+

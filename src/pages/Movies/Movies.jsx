@@ -1,7 +1,7 @@
 import React from 'react';
 // import { useNavigate } from 'react-router-dom';
 import SearchForm from 'components/SearchForm/SearchForm';
-import MoviesList from 'components/MoviesList/MoviesList';
+// import MoviesList from 'components/MoviesList/MoviesList';
 
 const Movies = () => {
   // const [searchTerm, setSearchTerm] = useState('');
@@ -14,7 +14,7 @@ const Movies = () => {
   return (
     <div>
       <SearchForm /> 
-      <MoviesList movies={[]} /> 
+      {/* <MoviesList movies={[]} />  */}
       {/* <h2>Search Movies</h2>
       <input
         type="text"

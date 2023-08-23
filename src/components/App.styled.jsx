@@ -50,6 +50,8 @@ export const StyledLi = styled.li`
 `;
 
 export const Container = styled.div`
+  /* display: flex;
+  flex-direction: column; */
   margin: 20px;
 `;
 
@@ -76,6 +78,12 @@ export const Button = styled.button`
   &:hover {
     background-color: #0056b3;
   }
+`;
+
+export const StyledPoster = styled.img`
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
 `;
 
 // export const Paragraf = styled.p`

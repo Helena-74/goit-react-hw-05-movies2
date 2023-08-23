@@ -26,6 +26,7 @@ const Home = () => {
     <Container>
       <StyledHeader>Trending Movies</StyledHeader>
       <StyledUl>
+      {/* <StyledPoster src={`https://image.tmdb.org/t/p/w500${trendingMovies.poster_path}`} alt={`${trendingMovies.title} Poster`} /> */}
         <MoviesList movies={trendingMovies} />
         {/* {trendingMovies.map(movie => (
           <li key={movie.id}>

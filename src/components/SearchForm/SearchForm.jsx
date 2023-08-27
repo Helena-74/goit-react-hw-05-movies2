@@ -2,7 +2,7 @@ import { Button, Container, Input, StyledHeader } from 'components/App.styled';
 import React, { useState } from 'react';
 import { Form, useSearchParams } from 'react-router-dom';
 
-const SearchForm = () => {
+const SearchForm = (onSubmit) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [setSearchParams] = useSearchParams();
 

@@ -25,16 +25,17 @@ const MovieDetails = () => {
     <Container>
       <StyledHeader>{movieDetails.title}</StyledHeader>
       <StyledPoster src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={`${movieDetails.title} Poster`} />
-      <Outlet />
-      <p>{movieDetails.overview}</p>
-      <StyledNavLink to={`cast`}>Cast</StyledNavLink>
-      <StyledNavLink to={`reviews`}>Reviews</StyledNavLink>
       
+      <p>{movieDetails.overview}</p>
+      <StyledNavLink to={`/movies/${movieId}/cast`}>Cast</StyledNavLink>
+      <StyledNavLink to={`/movies/${movieId}/reviews`}>Reviews</StyledNavLink>
+      <Outlet />
     </Container>
   );
 };
 
 export default MovieDetails;
+
 
 // import React, { useEffect, useState } from 'react';
 // import { useParams } from 'react-router-dom';

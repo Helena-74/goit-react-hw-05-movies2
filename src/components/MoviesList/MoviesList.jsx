@@ -1,4 +1,4 @@
-import { StyledLi, StyledLink, StyledUl } from 'components/App.styled';
+import { StyledLi, StyledLink, StyledPoster, StyledUl } from 'components/App.styled';
 import React from 'react';
 
 const MoviesList = ({ movies }) => {
@@ -7,6 +7,7 @@ const MoviesList = ({ movies }) => {
       {movies.map(movie => (
         <StyledLi key={movie.id}>
           <StyledLink to={`/movies/${movie.id}`}>{movie.title}</StyledLink>
+          <StyledPoster src={`https://image.tmdb.org/t/p/w500${movie.id.poster_path}`} alt={`${movie.title} Poster`} />
         </StyledLi>
       ))}
     </StyledUl>

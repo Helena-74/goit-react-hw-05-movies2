@@ -25,7 +25,7 @@ const Reviews = () => {
     <Container>
       <StyledHeader>Reviews</StyledHeader>
       <StyledUl>
-        {reviews.map(review => (
+        {reviews && reviews.map(review => (
           <StyledLi key={review.id}>
             <p>{review.author}</p>
             <p>{review.content}</p>

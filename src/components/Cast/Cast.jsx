@@ -25,9 +25,9 @@ const Cast = () => {
     <Container>
       <StyledHeader>Cast</StyledHeader>
       <StyledUl>
-        {cast.map(actor => (
-          <StyledLi key={actor.id}>{actor.name}</StyledLi>
-        ))}
+      {cast && cast.map(actor => (
+        <StyledLi key={actor.id}>{actor.name}</StyledLi>
+      ))}
       </StyledUl>
     </Container>
   );

@@ -27,8 +27,8 @@ const MovieDetails = () => {
       <StyledPoster src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={`${movieDetails.title} Poster`} />
       
       <p>{movieDetails.overview}</p>
-      <StyledNavLink to={`/movies/${movieId}/cast`}>Cast</StyledNavLink>
-      <StyledNavLink to={`/movies/${movieId}/reviews`}>Reviews</StyledNavLink>
+      <StyledNavLink to={`cast`}>Cast</StyledNavLink>
+      <StyledNavLink to={`reviews`}>Reviews</StyledNavLink>
       <Outlet />
     </Container>
   );

@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import SearchForm from 'components/SearchForm/SearchForm';
 import { Container } from 'components/App.styled';
+import { useSearchParams } from 'react-router-dom';
 // import MoviesList from 'components/MoviesList/MoviesList';
 
 const Movies = () => {
-  // const [searchTerm, setSearchTerm] = useState('');
-  // const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  // const handleSearch = () => {
-  //   navigate(`/movies?search=${searchTerm}`);
-  // };
+  useEffect(()=>{
+  const query = searchParams.get('query')
+  console.log(query )
+  },[searchParams])
 
+  const handleSearch = (query) => {
+  setSearchParams({query})
+  };
   return (
     <Container>
-      <SearchForm /> 
+      <SearchForm onSubmit={handleSearch}/> 
       {/* <MoviesList movies={[]} />  */}
       {/* <h2>Search Movies</h2>
       <input

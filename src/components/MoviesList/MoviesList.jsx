@@ -14,6 +14,7 @@ const MoviesList = ({ movies }) => {
       {movies.map(({ id, title, poster_path }) => (
         <StyledLi key={id}>
           <StyledLink to={`/movies/${id}`}>
+            {/* <StyledPoster src={`https://image.tmdb.org/t/p/w500${movie.id.poster_path}`} alt={`${movie.title} Poster`} /> */}
             {poster_path ? (
               <StyledPoster
                 src={`https://image.tmdb.org/t/p/w200/${poster_path}`}

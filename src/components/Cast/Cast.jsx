@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_KEY, BASE_URL } from 'components/api';
-import { Container, StyledHeader, StyledLi, StyledUl } from 'components/App.styled';
+import { Container, NoPoster, StyledHeader, StyledLi, StyledPoster, StyledUl } from 'components/App.styled';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -24,11 +24,27 @@ const Cast = () => {
   return (
     <Container>
       <StyledHeader>Cast</StyledHeader>
-      <StyledUl>
-      {cast && cast.map(actor => (
-        <StyledLi key={actor.id}>{actor.name}</StyledLi>
-      ))}
+      
+      {cast && cast.map(({ profile_path, name, character, id }) => (
+        <StyledUl key={id}>
+        <StyledPoster
+        src={
+          profile_path
+            ? `https://image.tmdb.org/t/p/w500/${profile_path}`
+            : (
+              <NoPoster />
+            )
+        }
+        width={100}
+        alt="avatar"
+      />
+        <StyledLi>
+          <p>{name}</p>
+          <p>Character: {character}</p>
+        </StyledLi>
+      
       </StyledUl>
+      ))}
     </Container>
   );
 };

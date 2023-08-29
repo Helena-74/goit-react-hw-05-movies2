@@ -101,11 +101,6 @@ export const NoPoster = styled.div`
   outline: black 2px solid;
 `;
 
-// export const Paragraf = styled.p`
-  
-// `
-
-
 // export const App = () => {
 //   return (
 //     <div

@@ -28,16 +28,14 @@ const Cast = () => {
       {cast && cast.map(({ profile_path, name, character, id }) => (
         <StyledUl key={id}>
         <StyledPoster
-        src={
+          src={
           profile_path
             ? `https://image.tmdb.org/t/p/w500/${profile_path}`
             : (
               <NoPoster />
-            )
-        }
-        width={100}
-        
-      />
+            )}
+          width={100}
+        />
         <StyledLi>
           <p>{name}</p>
           <p>Character: {character}</p>

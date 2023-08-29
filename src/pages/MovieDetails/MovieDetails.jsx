@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { API_KEY, BASE_URL } from 'components/api';
-import { Container, StyledHeader, StyledPoster, StyledNavLink, StyledLink } from 'components/App.styled';
+import { Container, StyledHeader, StyledPoster, StyledNavLink } from 'components/App.styled';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -26,9 +26,9 @@ const MovieDetails = () => {
   return (
     <>
     <Container>
-        <StyledLink to={locationRef.current?.state?.from ?? '/'}>
+        <StyledNavLink to={locationRef.current?.state?.from ?? '/'}>
           ← Back
-        </StyledLink>
+        </StyledNavLink>
     </Container>
     <Container>
       <StyledHeader>{movieDetails.title}</StyledHeader>

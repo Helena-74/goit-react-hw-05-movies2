@@ -36,7 +36,7 @@ const Cast = () => {
             )
         }
         width={100}
-        alt="avatar"
+        
       />
         <StyledLi>
           <p>{name}</p>

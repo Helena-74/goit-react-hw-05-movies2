@@ -12,10 +12,10 @@ export const StyledHead = styled.h3`
 `;
 
 export const StyledLink = styled(Link)`
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   color: black;
-  display: inline-block;
-  font-size: 20px;
+  /* display: inline-block; */
+  /* font-size: 20px; */
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -31,21 +31,26 @@ export const StyledNavLink = styled(NavLink)`
   font-size: 20px;
   border: 1px solid blue;
   border-radius: 6px;
-  
+
   text-decoration: none;
   &:hover {
     text-decoration: underline;
     color: #ffffff;
-    background-color: #0a0acc ;
+    background-color: #0a0acc;
   }
 `;
 
 export const StyledUl = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   list-style: none;
   padding: 0;
 `;
 
 export const StyledLi = styled.li`
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
 `;
 
@@ -83,7 +88,17 @@ export const Button = styled.button`
 export const StyledPoster = styled.img`
   max-width: 100%;
   height: auto;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
+`;
+
+export const StyledTitle = styled.p`
+  max-width: 200px;
+`;
+
+export const NoPoster = styled.div`
+  width: 200px;
+  height: 300px;
+  outline: black 2px solid;
 `;
 
 // export const Paragraf = styled.p`

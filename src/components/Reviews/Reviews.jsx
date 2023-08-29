@@ -10,7 +10,7 @@ const Reviews = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/movies/get-movie-reviews/${movieId}?api_key=${API_KEY}`);
+        const response = await fetch(`${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}`);
         const data = await response.json();
         setReviews(data.results);
       } catch (error) {

@@ -10,7 +10,7 @@ const Cast = () => {
   useEffect(() => {
     const fetchCast = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/movies/get-movie-credits/${movieId}?api_key=${API_KEY}`);
+        const response = await fetch(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`);
         const data = await response.json();
         setCast(data.cast);
       } catch (error) {

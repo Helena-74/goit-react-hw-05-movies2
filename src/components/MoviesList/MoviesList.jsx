@@ -1,16 +1,31 @@
-import { StyledLi, StyledLink, StyledPoster, StyledUl } from 'components/App.styled';
+import {
+  StyledLi,
+  StyledLink,
+  StyledPoster,
+  StyledUl,
+  StyledTitle,
+  NoPoster,
+} from 'components/App.styled';
 import React from 'react';
 
 const MoviesList = ({ movies }) => {
-
-  
   return (
     <StyledUl>
-      {movies.map(movie => (
-        <StyledLi key={movie.id}>
-          <StyledLink to={`/movies/${movie.id}`}>{movie.title}</StyledLink>
-          {/* <StyledPoster src={`https://image.tmdb.org/t/p/w500${movie.id.poster_path}`} alt={`${movie.title} Poster`} /> */}
-          <StyledPoster src={`https://image.tmdb.org/t/p/w500${movie.id.poster_path}`} width="200" height="300" />
+      {movies.map(({ id, title, poster_path }) => (
+        <StyledLi key={id}>
+          <StyledLink to={`/movies/${id}`}>
+            {poster_path ? (
+              <StyledPoster
+                src={`https://image.tmdb.org/t/p/w200/${poster_path}`}
+                width="200"
+                height="300"
+              />
+            ) : (
+              <NoPoster />
+            )}
+
+            <StyledTitle>{title}</StyledTitle>
+          </StyledLink>
         </StyledLi>
       ))}
     </StyledUl>

@@ -27,8 +27,7 @@ const MovieDetails = () => {
     <>
     <Container>
         <StyledLink to={locationRef.current?.state?.from ?? '/'}>
-          {/* <ArrowBackIosRoundedIcon /> */}
-          Back
+          ← Back
         </StyledLink>
     </Container>
     <Container>

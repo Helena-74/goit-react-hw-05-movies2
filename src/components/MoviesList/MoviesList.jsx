@@ -7,13 +7,15 @@ import {
   NoPoster,
 } from 'components/App.styled';
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const MoviesList = ({ movies }) => {
+  const location = useLocation();
   return (
     <StyledUl>
       {movies.map(({ id, title, poster_path }) => (
         <StyledLi key={id}>
-          <StyledLink to={`/movies/${id}`}>
+          <StyledLink to={`/movies/${id}`} state={{ from: location }}>
             {/* <StyledPoster src={`https://image.tmdb.org/t/p/w500${movie.id.poster_path}`} alt={`${movie.title} Poster`} /> */}
             {poster_path ? (
               <StyledPoster

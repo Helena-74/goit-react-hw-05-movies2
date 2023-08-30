@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_KEY, BASE_URL } from 'components/api';
-import { Container, NoPoster, StyledHeader, StyledLi, StyledPoster, StyledUl } from 'components/App.styled';
+import { Container, StyledHeader, StyledLi, StyledPoster, StyledUl } from 'components/App.styled';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -21,6 +21,8 @@ const Cast = () => {
     fetchCast();
   }, [movieId]);
 
+  const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
+
   return (
     <Container>
       <StyledHeader>Cast</StyledHeader>
@@ -31,9 +33,7 @@ const Cast = () => {
           src={
           profile_path
             ? `https://image.tmdb.org/t/p/w500/${profile_path}`
-            : (
-              <NoPoster src={'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700'}/>
-            )}
+            : defaultImg }
           width={100}
         />
         <StyledLi>

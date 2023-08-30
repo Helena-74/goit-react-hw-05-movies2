@@ -23,6 +23,8 @@ const MovieDetails = () => {
     fetchMovieDetails();
   }, [movieId]);
 
+  const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
+
   return (
     <>
     <Container>
@@ -32,8 +34,9 @@ const MovieDetails = () => {
     </Container>
     <Container>
       <StyledHeader>{movieDetails.title}</StyledHeader>
-      <StyledPoster src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={`${movieDetails.title} Poster`} />
-      
+      {/* <StyledPoster src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={`${movieDetails.title} Poster`} /> */}
+      <StyledPoster src={movieDetails.poster_path ? `https://image.tmdb.org/t/p/w500${movieDetails.poster_path}` : defaultImg } alt={`${movieDetails.title} Poster`} width="200"
+                height="300" />
       <p>{movieDetails.overview}</p>
       <StyledNavLink to={`cast`}>Cast</StyledNavLink>
       <StyledNavLink to={`reviews`}>Reviews</StyledNavLink>

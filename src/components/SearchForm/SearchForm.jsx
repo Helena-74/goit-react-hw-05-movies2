@@ -1,8 +1,8 @@
-import { Button, Container, Input, StyledHeader } from 'components/App.styled';
+import { Button, Container, FormContainer, Input, StyledHeader } from 'components/App.styled';
 import React, { useState } from 'react';
-import { Form } from 'react-router-dom';
+// import { Form } from 'react-router-dom';
 
-const SearchForm = ({onSubmit}) => {
+const SearchForm = ({onSubmit, searchParams}) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = (e) => {
@@ -17,14 +17,14 @@ const SearchForm = ({onSubmit}) => {
   return (
     <Container>
       <StyledHeader>Search Movies</StyledHeader>
-      <Form onSubmit={handleSearch}>
+      <FormContainer onSubmit={handleSearch}>
         <Input
           type="text"
           value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
+          onChange={ e => setSearchTerm(e.target.value)}
         />
         <Button type="submit">Search</Button>
-      </Form>
+      </FormContainer>
     </Container>
   );
 };

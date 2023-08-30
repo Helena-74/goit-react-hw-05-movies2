@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { API_KEY, BASE_URL } from 'components/api';
 import MoviesList from 'components/MoviesList/MoviesList';
 import { Container, StyledHeader, StyledUl } from 'components/App.styled';
@@ -26,13 +25,7 @@ const Home = () => {
     <Container>
       <StyledHeader>Trending Movies</StyledHeader>
       <StyledUl>
-      {/* <StyledPoster src={`https://image.tmdb.org/t/p/w500${trendingMovies.poster_path}`} alt={`${trendingMovies.title} Poster`} /> */}
         <MoviesList movies={trendingMovies} />
-        {/* {trendingMovies.map(movie => (
-          <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-          </li>
-        ))} */}
       </StyledUl>
       
     </Container>
@@ -41,3 +34,19 @@ const Home = () => {
 
 export default Home;
 
+
+// return (
+//   <Container>
+//     <StyledHeader>Trending Movies</StyledHeader>
+//     <StyledUl>
+//     {/* <StyledPoster src={`https://image.tmdb.org/t/p/w500${trendingMovies.poster_path}`} alt={`${trendingMovies.title} Poster`} /> */}
+//       <MoviesList movies={trendingMovies} />
+//       {/* {trendingMovies.map(movie => (
+//         <li key={movie.id}>
+//           <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+//         </li>
+//       ))} */}
+//     </StyledUl>
+    
+//   </Container>
+// );
